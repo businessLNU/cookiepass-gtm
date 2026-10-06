@@ -40,8 +40,10 @@ Die Browserprüfungen mit der öffentlichen CDN-Datei sind bestanden.
 Am 06.10.2026 zeigte der GTM-Editor einen Fehler in allen fünf Testfällen:
 Die Objekt-API `templateStorage` wurde mit `mock()` statt `mockObject()`
 ersetzt. Die Testfälle und die lokale Testnachbildung sind korrigiert;
-alle fünf Fälle bestehen lokal. Die erneute Prüfung im echten GTM-Editor
-und die Prüfung mit Tag Assistant stehen noch aus. Dieses Repository enthält den zur Einreichung
+alle fünf Fälle bestehen lokal. Alle fünf Tests bestehen auch im echten GTM-Editor. Der finale Export enthält
+die bestätigten Gallery-Bedingungen. Tag Assistant zeigte eine fehlende Leseberechtigung für den Callback. Diese
+Vorlage erlaubt jetzt gezielt Lesen und Schreiben des Callbacks. Damit zeigt Tag
+Assistant keine Berechtigungsfehler mehr, und die Cookiepass-Brücke läuft im GTM-Modus (geprüft am 06.10.2026). Dieses Repository enthält den zur Einreichung
 vorbereiteten Code; eine Gallery-Aufnahme oder Google-CMP-Zertifizierung ist
 damit nicht verbunden.
 
@@ -93,7 +95,7 @@ wurden, lassen sich durch diesen späteren GTM-Einbau nicht rückwirkend blockie
 | --- | --- |
 | Consent | Schreiben der vier oben genannten Zustände |
 | Skript laden | Nur `https://cdn.cookiepass.io/cp.js?*` |
-| `cookiepassGtmConsentUpdate` | Schreiben des Callbacks |
+| `cookiepassGtmConsentUpdate` | Lesen und Schreiben des Callbacks |
 | `Cookiepass.googleConsentMode` | Ausführen der Modusprüfung |
 | `dataLayer` | Lesen und Schreiben für `createQueue` |
 | Template-Speicher | Status der einmaligen Initialisierung |
@@ -120,8 +122,9 @@ wurden, lassen sich durch diesen späteren GTM-Einbau nicht rückwirkend blockie
 Die aktuelle Einreichung erfolgt über das Gallery-Formular mit einem GitHub-
 Repository. Ein Pull Request in ein Google-Cloud-Repository gehört nicht zu
 diesem dokumentierten Ablauf. Die Dokumentations-URL in `metadata.yaml` zeigt
-auf dieses Repository. Der Versions-SHA muss nach dem Upload der finalen englischen Vorlage durch
-den Commit der tatsächlich freizugebenden Template-Datei ersetzt werden.
+auf dieses Repository. Der Versions-SHA in der beiliegenden metadata.yaml verweist auf den geprüften
+finalen Template-Commit. Dieser Wert muss auch in der öffentlichen metadata.yaml
+stehen. Ein reiner Metadata-Commit ändert den Template-Versions-SHA nicht.
 
 ## Häufige Fragen
 

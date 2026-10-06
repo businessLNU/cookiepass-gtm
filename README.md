@@ -31,8 +31,11 @@ Cookiepass plan.
 
 The compatible Cookiepass core has been available on the CDN since October 6,
 2026. Isolated browser checks using the public CDN script and all five local
-template test cases have passed. Verification in the actual GTM Template
-Editor and Tag Assistant is still pending for this version.
+template test cases have passed. All five tests have also passed in the GTM
+Template Editor. The Tag Assistant check identified a missing read permission
+for the consent callback; this version grants read and write access to that
+specific callback. The template includes the accepted Gallery terms.
+With this fix, Tag Assistant shows no permission errors and the Cookiepass bridge runs in GTM mode (checked on 6 October 2026).
 
 This repository contains a template prepared for submission. Gallery inclusion
 and Google CMP certification have not been granted as part of this work.
@@ -88,7 +91,7 @@ cannot be blocked retroactively by this later GTM installation.
 | --- | --- |
 | Consent | Write the four consent states listed above |
 | Script injection | Only `https://cdn.cookiepass.io/cp.js?*` |
-| `cookiepassGtmConsentUpdate` | Write the consent callback |
+| `cookiepassGtmConsentUpdate` | Read and write the consent callback |
 | `Cookiepass.googleConsentMode` | Execute the integration mode check |
 | `dataLayer` | Read and write for `createQueue` |
 | Template storage | Store the per-page initialization status |
@@ -116,9 +119,9 @@ cannot be blocked retroactively by this later GTM installation.
    `versions`, retaining previously published versions.
 
 The documented submission process uses the Gallery form and a GitHub repository.
-It does not require a pull request to a Google Cloud repository. The bundled
-metadata currently identifies the previous public template commit; replace its
-SHA after uploading the final English template.
+It does not require a pull request to a Google Cloud repository. The bundled metadata references the verified final template commit. Check
+that the public `metadata.yaml` uses this SHA before submission. A metadata-only
+commit does not change the template version SHA.
 
 ## Frequently asked questions
 
