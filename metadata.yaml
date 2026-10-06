@@ -1,5 +1,0 @@
-homepage: "https://cookiepass.io"
-documentation: "https://github.com/businessLNU/cookiepass-gtm/blob/main/README.md"
-versions:
-  - sha: "9bd68774bfd519de02f1954a565866a7ec98c261"
-    changeNotes: "Erste Version: Cookiepass und Google Consent Mode v2."
