@@ -1,5 +1,5 @@
 homepage: "https://cookiepass.io"
 documentation: "https://github.com/businessLNU/cookiepass-gtm/blob/main/README.md"
 versions:
-  - sha: "d0ee16b591a94f17005de879fbc6f8861f5d81f4"
+  - sha: "3c42c98352cb27d1f30efaa47a76c91b7dfd43d3"
     changeNotes: "Initial release: Cookiepass CMP with Google Consent Mode v2."
